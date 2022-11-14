@@ -1,0 +1,35 @@
+{% extends 'temp/Shipindex.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><center>
+	<h1>view complaint</h1>
+	<table border="2">
+		<tr>
+
+{#            <td>username</td>#}
+			<td>complaint</td>
+			<td>date</td>
+			<td>time</td>
+
+		</tr>
+        {% for i in L %}
+		<tr><form>
+{#            <td></td>#}
+			<td>{{ i.complaint }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+            </form>
+
+		</tr>
+        {% endfor %}
+
+	</table>
+</center>
+
+</body>
+</html>
+{% endblock %}

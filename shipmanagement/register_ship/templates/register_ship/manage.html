@@ -1,0 +1,35 @@
+{% extends 'temp/Adminindex.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>manageship</title>
+</head>
+<body>
+<center>
+    <table border="2">
+        <tr>
+            <td>Ship name</td>
+            <td>E-mail</td>
+            <td>phone number</td>
+            <td>Capacity</td>
+        </tr>
+        {% for i in e %}
+        <tr>
+            <td>{{ i.ship_name }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.phone_num }}</td>
+            <td>{{ i.capacity }}</td>
+            <td><a href={% url 'up' idd=i.ship_id %}>Update</a> </td>
+            <td><a href={% url 'd' idd=i.ship_id %}>Delete</a> </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+</center>
+
+</body>
+</html>
+{% endblock %}

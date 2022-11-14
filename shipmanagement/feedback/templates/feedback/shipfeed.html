@@ -1,0 +1,31 @@
+{% extends 'temp/Shipindex.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>view feedback</title>
+</head>
+<body>
+	<h1>feedback</h1>
+	<table border="3">
+		<tr>
+		<td>Feedback</td>
+		<td>date</td>
+		<td>time</td>
+
+
+	</tr>
+        {% for i in pp %}
+	<tr>
+        <td>{{ i.feedback }}</td>
+		<td>{{ i.date }}</td>
+        <td>{{ i.time }}</td>
+
+	</tr>
+        {% endfor %}
+	</table>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'temp/Adminindex.html' %}
+{% block base %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>postreply</title>
+</head>
+<body>
+<table border="2">
+    <tr>
+        <td>complaint</td>
+
+
+        <tr>
+                <td>"{{ n.complaint }}"</td>
+			</tr>
+    <form method="post">
+        {% csrf_token %}
+
+         <tr>
+             <td><input type="text" name="reply" rows="10" cols="60" placeholder="reply">
+
+				</td>
+			</tr>
+
+        <tr>
+				<td><input type="submit"  value="post"></td>
+
+			</tr>
+    </form>
+
+</table>
+{% endblock %}
+
+
+
+</body>
+</html>

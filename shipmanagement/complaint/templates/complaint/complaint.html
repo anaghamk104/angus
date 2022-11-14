@@ -1,0 +1,44 @@
+
+{% extends 'temp/userindex.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>complaint</title>
+</head>
+<body>
+	<center>
+	<h1> complaint</h1>
+	<form method="post">
+        <tr>
+            <td>
+                <select name="ship">
+                    {% for i in k  %}
+                    <option value="{{ i.ship_id }}">{{ i.ship_name }}</option>
+
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        {% csrf_token %}
+		<table border="3" >
+            <tr>
+                <td>Complaint</td>
+            </tr>
+
+			<tr>
+                <td><textarea  name="complaint" rows="10" cols="60">
+					
+				</textarea></td>
+			</tr>
+            <td><input type="submit" ></td>
+
+
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
+{% endblock %}

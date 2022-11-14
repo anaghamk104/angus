@@ -1,0 +1,86 @@
+{% extends 'temp/userindex.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bookseat</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+<center>
+	<h1>Register slot</h1>
+	<form method="post">
+        {% csrf_token %}
+		<p>Register your slot here</p>
+		<table border="3" >
+			 <tr>
+                <td>username</td>
+                <td><input type="text" name="d"></td>
+            </tr>
+			<tr>
+				<td>Route</td>
+				<td colspan="2"><select name="fromplace" id="shpfrom">
+					<option value="--from--">--From--</option>
+					<option value="kochi">kochi</option>
+					<option value="kochi">kochi</option>
+                </select></td>
+            <tr>
+            <td>To</td>
+				<td><select>
+					<option value="to" name="toplace">--To--</option>
+					<option value="fort-kochi">fort-kochi</option>
+					<option value="kochi">fort-kochi</option>
+					<option value="cochin">cochin</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Time</td>
+				<td>From
+                    <input type="Time" name="frm_time"></td>
+            </tr>
+
+            <tr><td>
+
+                   <td>To <input type="Time" name="t"></td>
+
+			</tr>
+			<tr>
+				<td>Passengers</td>
+				<td>
+				<select name="adultno" id="adultno">
+					<option value="--from--">-Adult--</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="3">4</option>
+				</select>
+{#				<select name="childno" id="childno">#}
+{#					<option value="0">--childno--</option>#}
+{#					<option value="1">0</option>#}
+{#					<option value="2">1</option>#}
+{#					<option value="2">2</option>#}
+{#					<option value="3">3</option>#}
+{#				</select></td>#}
+                </td>
+
+			</tr>
+            <tr>
+                <td>date</td>
+                <td><input type="date" name="date"></td>
+            </tr>
+			<tr>
+				<td><input type="submit" ></td>
+
+			</tr>
+
+
+
+		</table>
+	</form>
+
+</center>
+
+</body>
+</html>
+{% endblock %}

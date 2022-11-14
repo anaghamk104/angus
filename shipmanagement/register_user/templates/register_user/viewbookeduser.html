@@ -1,0 +1,34 @@
+{% extends 'temp/Adminindex.html'%}
+{% block base %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title></title>
+</head>
+<center>
+<body><center>
+	<h1>view registered users</h1>
+	<table border="2">
+		<tr>
+			<td>username</td>
+			<td>email</td>
+			<td>address</td>
+		</tr>
+        {% for i in r %}
+		<tr>
+			<td>{{  i.user_name}}</td>
+			<td>{{ i.email }}</td>
+			<td>{{i.address}}</td>
+        <td><a href={% url 'i' idd=i.u_id %}>Approve</a> </td>
+        <td><a href={% url 'y' idd=i.u_id %}>Reject</a> </td>
+
+		</tr>
+        {% endfor %}
+
+
+	</table>
+</center>
+</center>
+</body>
+</html>
+{% endblock %}

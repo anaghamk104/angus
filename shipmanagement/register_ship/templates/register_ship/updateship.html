@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>updateship</title>
+</head>
+<body>
+
+<h1>UPDATE HERE</h1>
+	<form method="post">
+        {% csrf_token %}
+		<table border="3" >
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="ship_name" value="{{ o.ship_name }}"></td>
+
+			</tr>
+			<tr>
+				<td>RegNumber</td>
+				<td><input type="varchar" name="reg_num" value="{{ o.register_number }}"></td>
+
+			</tr>
+
+			<tr>
+				<td>email</td>
+				<td><input type="email" name="email" value="{{ o.email }}"></td>
+
+			</tr>
+			<tr>
+				<td>Phone Number</td>
+				<td><input type="phone" name="Phone" value="{{ o.phone_num }}"></td>
+
+			</tr>
+			<tr>
+				<td>capacity to accomodate</td>
+				<td><input type="int" name="capacity" value="{{ o.capacity }}"></td>
+
+			</tr>
+			<tr>
+				<td><input type="submit" ></td>
+
+			</tr>
+
+
+
+		</table>
+	</form>
+
+
+</body>
+</html>
