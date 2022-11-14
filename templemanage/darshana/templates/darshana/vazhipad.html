@@ -1,0 +1,32 @@
+{% extends 'temp/devoteeindex.html'%}
+{% block base %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>View Dharshana</title>
+</head>
+<body>
+	<center>
+		<h1>Dharshana Details</h1>
+    <table border="3">
+		<tr>
+		<td>Date</td>
+		<td>time</td>
+		<td>Description</td>
+         <td>type</td>
+	</tr>
+        {% for i in a %}
+	<tr>
+		<td>{{ i.date }}</td>
+		<td>{{ i.time }}</td>
+		<td>{{ i.desc }}</td>
+        <td>{{ i.type }}</td>
+        <td><a href="/darshana/vazh_booking/{{ i.did }}">book</a></td>
+	</tr>
+        {% endfor %}
+	</table>
+    </center>
+
+</body>
+</html>
+{% endblock %}

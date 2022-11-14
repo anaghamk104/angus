@@ -1,0 +1,58 @@
+{% extends 'temp/devoteeindex.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PROFILE</title>
+</head>
+{#<link rel="stylesheet" href="style.css">#}
+<body>
+<center>
+	<h1>YOUR PROFILES</h1>
+	<form method="post">
+        {% csrf_token %}
+		<table border="3" >
+			<tr>
+				<td>Full Name</td>
+				<td><input type="text" name="name" value="{{ t.uname }}"></td>
+
+			<tr>
+				<td>Address</td>
+				<td><input type="text" name="ads" value="{{ t.address}}"></td>
+
+			</tr>
+			<tr>
+				<td>Date of Birth</td>
+				<td><input type="Date" name="dob" value="{{ t.dob }}"></td>
+
+			</tr>
+			<tr>
+				<td>email</td>
+				<td><input type="text" name="email" value="{{ t.email }}"></td>
+
+			</tr>
+			<tr>
+				<td>Phone Number</td>
+				<td><input type="text" name="Phone" size="10" value="{{ t.phone }}"></td>
+
+			</tr>
+			<tr>
+				<td>Nakshathra</td>
+				<td><input type="text" name="star" value="{{ t.nakshathra }}"></td>
+
+			</tr>
+			<tr>
+				<td>&#160</td>
+				<td><input type="submit" ></td>
+
+			</tr>
+
+		</table>
+	</form>
+</div>
+</center>
+
+</body>
+</html>
+{% endblock %}
